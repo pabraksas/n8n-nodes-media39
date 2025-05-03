@@ -8,8 +8,8 @@
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Pavel Abraksas",
+    "email": "Pavel.Abraksas@gmail.com"
   },
   "repository": {
     "type": "git",
@@ -36,11 +36,11 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
+      "dist/credentials/Media39CredentialsApi.credentials.js",
       "dist/credentials/HttpBinApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
+      "dist/nodes/Media39Node/Media39Node.node.js",
       "dist/nodes/HttpBin/HttpBin.node.js"
     ]
   },

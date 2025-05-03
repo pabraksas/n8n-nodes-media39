@@ -49,7 +49,7 @@ export class ExampleCredentialsApi implements ICredentialType {
 	// The block below tells how this credential can be tested
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://example.com/',
+			baseURL: 'https://Media39.ru/',
 			url: '',
 		},
 	};

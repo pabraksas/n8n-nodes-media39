@@ -1,20 +1,100 @@
+# ###   Editor configuration, see https://editorconfig.org
+#
+# indent_style: set to tab or space to use hard tabs or soft tabs respectively.
+# indent_size: a whole number defining the number of columns used for each indentation level and the width of soft tabs (when supported). When set to tab, the value of tab_width (if specified) will be used.
+# tab_width: a whole number defining the number of columns used to represent a tab character. This defaults to the value of indent_size and doesn't usually need to be specified.
+# end_of_line: set to lf, cr, or crlf to control how line breaks are represented.
+# charset: set to latin1, utf-8, utf-8-bom, utf-16be or utf-16le to control the character set.
+# trim_trailing_whitespace: set to true to remove any whitespace characters preceding newline characters and false to ensure it doesn't.
+# insert_final_newline: set to true to ensure file ends with a newline when saving and false to ensure it doesn't.
+
+# ###
 root = true
 
+# ###
 [*]
 charset = utf-8
+end_of_line = lf
+max_line_length = 120
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# ###   Python
+[*.{py,ipynb}]
+indent_size = 4
+
+# ###   JavaScipt
+[*.{js,jsx,mjs,cjs}]
+indent_size = 2
+# quote_type = single
+
+# ###   TypeScipt
+[{src,scripts}/**.{ts,tsx}]
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_style = space
+indent_size = 2
+#quote_type = single
+
+# ###   HTML CSS VUE
+[*.{html,htm,css,vue}]
+indent_size = 2
+
+# ###   json yml
+[*.{json,yml,yaml}]
+indent_size = 2
+
+[*.min.*]
+indent_style = space
+trim_trailing_whitespace = false
+insert_final_newline = false
+
+# ###
+[*.{sh,cmd,bat}]
+indent_size = 2
+
+# ###
+[*.{md,mdx,mdwn,mdown,markdown,markdn,mkd,mdtxt,mdtext,workbook}]
+max_line_length = off
+trim_trailing_whitespace = false
+indent_size = unset
+
+[*.{txt, text}]
+max_line_length = off
+trim_trailing_whitespace = false
+indent_size = unset
+insert_final_newline = false
+
+# ###   .env | .config | *.ini | *.rst
+[{*.{rst,ini},.env,.config}]
+indent_size = 3
+
+# ###   *.gql | *.graphql | *.sql
+[*.{gql,graphql,sql}]
+indent_size = 2
+
+# ###   *.prisma
+[*.prisma]
+indent_size = 2
+
+# ###  Makefile [Tab indentation (size specified)]
+[Makefile]
+max_line_length = off
 indent_style = tab
 indent_size = 2
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
 
-[package.json]
+# ###   package.json | tsconfig.json |.travis.yml
+[{package.json,tsconfig.json,.travis.yml}]
 indent_style = space
 indent_size = 2
 
-[*.md]
-trim_trailing_whitespace = false
-
-[*.yml]
+# ###   docker-compose.y?ml | compose.y?ml | Dockerfile
+[{docker-compose.y?ml, compose.y?ml, Dockerfile}]
 indent_style = space
+indent_size = 2
+
+[CHANGELOG.md]
 indent_size = 2

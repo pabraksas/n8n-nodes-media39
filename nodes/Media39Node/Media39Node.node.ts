@@ -8,13 +8,13 @@ import { NodeConnectionType, NodeOperationError } from 'n8n-workflow';
 
 export class ExampleNode implements INodeType {
 	description: INodeTypeDescription = {
-		displayName: 'Example Node',
+		displayName: 'Media39 Node',
 		name: 'exampleNode',
 		group: ['transform'],
 		version: 1,
-		description: 'Basic Example Node',
+		description: 'Media39 Node',
 		defaults: {
-			name: 'Example Node',
+			name: 'Media39 Node',
 		},
 		inputs: [NodeConnectionType.Main],
 		outputs: [NodeConnectionType.Main],
@@ -22,8 +22,8 @@ export class ExampleNode implements INodeType {
 			// Node properties which the user gets displayed and
 			// can change on the node.
 			{
-				displayName: 'My String',
-				name: 'myString',
+				displayName: 'Media39',
+				name: 'Media39',
 				type: 'string',
 				default: '',
 				placeholder: 'Placeholder value',
@@ -47,7 +47,7 @@ export class ExampleNode implements INodeType {
 		// (This could be a different value for each item in case it contains an expression)
 		for (let itemIndex = 0; itemIndex < items.length; itemIndex++) {
 			try {
-				myString = this.getNodeParameter('myString', itemIndex, '') as string;
+				myString = this.getNodeParameter('Media39', itemIndex, '') as string;
 				item = items[itemIndex];
 
 				item.json.myString = myString;
