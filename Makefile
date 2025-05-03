@@ -166,6 +166,7 @@ build-images: init
 	#@docker build --tag s3app-license-repository-web-panel --file ./packages/docker/Dockerfile.s3app-license-repository-web-panel ./apps/s3app-license-repository-web-panel/
 
 push:
+	git commit -a -m "update"
 	@cat ~/.secrets.pavel.abraksas
 	#echo -e "$_/pabraksas/n8n-nodes-media39"
 	git push $("$_/pabraksas/n8n-nodes-media39")
