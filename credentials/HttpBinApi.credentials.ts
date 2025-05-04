@@ -8,7 +8,7 @@ import {
 export class HttpBinApi implements ICredentialType {
 	name = 'httpbinApi';
 	displayName = 'HttpBin API';
-	documentationUrl = '<your-docs-url>';
+	documentationUrl = 'https://media39.ru/api/v1/docs';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Token',

@@ -187,3 +187,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+#
+
+node_modules
+.DS_Store
+.tmp
+tmp
+dist
+npm-debug.log*
+yarn.lock
+.vscode/launch.json

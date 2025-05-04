@@ -6,12 +6,11 @@ import {
 } from 'n8n-workflow';
 
 export class ExampleCredentialsApi implements ICredentialType {
-	name = 'exampleCredentialsApi';
+	name = 'media39CredentialsApi';
 	displayName = 'Example Credentials API';
 	properties: INodeProperties[] = [
 		// The credentials to get from user and save encrypted.
-		// Properties can be defined exactly in the same way
-		// as node properties.
+		// Properties can be defined exactly in the same way as node properties.
 		{
 			displayName: 'User Name',
 			name: 'username',
@@ -29,8 +28,7 @@ export class ExampleCredentialsApi implements ICredentialType {
 		},
 	];
 
-	// This credential is currently not used by any node directly
-	// but the HTTP Request node can use it to make requests.
+	// This credential is currently not used by any node directly but the HTTP Request node can use it to make requests.
 	// The credential is also testable due to the `test` property below
 	authenticate: IAuthenticateGeneric = {
 		type: 'generic',
@@ -49,8 +47,8 @@ export class ExampleCredentialsApi implements ICredentialType {
 	// The block below tells how this credential can be tested
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://Media39.ru/',
-			url: '',
+			baseURL: 'https://Media39.ru',
+			url: 'https://media39.ru/credentials',
 		},
 	};
 }
