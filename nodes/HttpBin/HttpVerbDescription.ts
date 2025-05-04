@@ -14,7 +14,6 @@ export const httpVerbOperations: INodeProperties[] = [
 			},
 		},
 		options: [
-      /*
 			{
 				name: 'GET',
 				value: 'get',
@@ -37,7 +36,6 @@ export const httpVerbOperations: INodeProperties[] = [
 					},
 				},
 			},
-    */
 		],
 		default: '',
 	},
